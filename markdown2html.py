@@ -33,3 +33,10 @@ def convert_markdown_to_html(input_file, output_file):
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("\n".join(html_lines))
 
+    if __name__ == "__main__":
+    # Check that the correct number of arguments were provided
+    if len(sys.argv) != 3:
+        print("Usage: ./markdown2html.py <input_file> <output_file>", file=sys.stderr)
+        sys.exit(1)
+
+        
