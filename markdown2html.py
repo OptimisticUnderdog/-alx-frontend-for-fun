@@ -42,4 +42,8 @@ def convert_markdown_to_html(input_file, output_file):
         # Get the input and output file names from the command-line arguments
         input_file = sys.argv[1]
         output_file = sys.argv[2]
- 
+
+        # Convert the Markdown file to HTML and write the output to a file
+        convert_markdown_to_html(input_file, output_file)
+        # Exit with a successful status code
+        sys.exit(0)
