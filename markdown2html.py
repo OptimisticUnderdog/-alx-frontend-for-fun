@@ -20,4 +20,11 @@ def convert_markdown_to_html(input_file, output_file):
     with open(input_file, encoding="utf-8") as f:
         html_lines = []
         for line in f:
-
+            # Check for Markdown headings
+            match = re.match(r"^(#+) (.*)$", line)
+            if match:
+                heading_level = len(match.group(1))
+                heading_text = match.group(2)
+                html_lines.append(f"<h{heading_level}>{heading_text}</h{heading_level}>")
+            else:
+                html_lines.append(line.rstrip())
