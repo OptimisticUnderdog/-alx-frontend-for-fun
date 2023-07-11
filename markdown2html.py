@@ -39,4 +39,7 @@ def convert_markdown_to_html(input_file, output_file):
         print("Usage: ./markdown2html.py <input_file> <output_file>", file=sys.stderr)
         sys.exit(1)
 
-        
+        # Get the input and output file names from the command-line arguments
+        input_file = sys.argv[1]
+        output_file = sys.argv[2]
+ 
